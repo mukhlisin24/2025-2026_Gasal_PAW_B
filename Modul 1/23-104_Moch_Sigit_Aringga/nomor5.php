@@ -12,7 +12,7 @@ $ipk = 3.98;
 //Boolean memiliki dua nilai, true atau false
 $sudahLulus = false;
 
-echo "<h3>ini soal nomor 5</h3>";
+echo "<h3>ini soal nomor5</h3>";
 echo "<h3>Informasi Variabel:</h3>";
 echo "Variabel \$nama: ";
 var_dump($nama);

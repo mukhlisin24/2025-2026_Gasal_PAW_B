@@ -5,7 +5,7 @@ $nim = "230411100104";
 $kelas = "PAW - B       ";
 $program_studi = "Teknik Informatika";
 $alamat = "Telang Kec. Kamal Kab. Bangkalan";
-$hobi = "Membaca Buku";
+$hobi = "Membaca buku";
 ?>
 
 <!DOCTYPE html>

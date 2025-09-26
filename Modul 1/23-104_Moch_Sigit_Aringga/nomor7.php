@@ -3,7 +3,7 @@
 $angka1 = 20;
 $angka2 = 5;
 
-echo "<h3>ini soal nomor7</h3><br>";
+echo "<h3>ini soal nomor 7</h3><br>";
 echo "Angka 1: $angka1 <br>";
 echo "Angka 2: $angka2 <br><br>";
 

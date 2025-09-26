@@ -21,7 +21,7 @@ function hitungLuasPersegi($sisi) {
 }
 
 
-echo "<h3>soal nomor9 Fungsi</h3>";
+echo "<h3>soal nomor 9 Fungsi</h3>";
 
 halo(); 
 nama("ariii"); 

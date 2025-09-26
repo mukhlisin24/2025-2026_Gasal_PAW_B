@@ -1,6 +1,6 @@
 <?php
 
-echo "nomor 3 - penggunaan komentar pada PHP.";
+echo "nomor 3 penggunaan komentar pada PHP.";
 echo "<br>";
 
 // Ini komentar single-line.
