@@ -1,7 +1,7 @@
 <?php
 $color = "merah";
 $COLOR = "hijau";
-$coLOR = "biru";
+$color = "biru";
 
 echo "color: $color<br>";
 echo "COLOR: $COLOR<br>";
