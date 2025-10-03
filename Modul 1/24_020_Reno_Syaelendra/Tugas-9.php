@@ -8,5 +8,12 @@ function hitungLuas($panjang, $lebar = 5) {
 }
 
 sapa();
+function hit($a) {
+    return $a;
+}
+ 
+echo hit();
+
+echo hitungLuas(1);
 echo "Luas: " . hitungLuas(10);
 ?>
