@@ -1,6 +1,5 @@
 <?php
 // Kembangkan progam sistem kasir sederhana dengan menu, perulangan, dan total harga! (clue: ada input menu yang dibeli, dan ulang lagi jika ada item menu yang lain).
-// Input pesanan (manual pakai variabel, bukan array)
 $pilihan1 = 1; $jumlah1 = 2; // Nasi Goreng 2 porsi
 $pilihan2 = 4; $jumlah2 = 3; // Es Teh 3 gelas
 $pilihan3 = 5; $jumlah3 = 1; // Es Jeruk 1 gelas
