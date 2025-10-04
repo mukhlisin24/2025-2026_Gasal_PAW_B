@@ -1,61 +1,61 @@
 <?php
-// Kembangkan progam sistem kasir sederhana dengan menu, perulangan, dan total harga! (clue: ada input menu yang dibeli, dan ulang lagi jika ada item menu yang lain).
-$pilihan1 = 1; $jumlah1 = 2; // Nasi Goreng 2 porsi
-$pilihan2 = 4; $jumlah2 = 3; // Es Teh 3 gelas
-$pilihan3 = 5; $jumlah3 = 1; // Es Jeruk 1 gelas
+$daftar_menu = [
+    1 => ['nama' => 'Nasi Goreng', 'harga' => 15000],
+    2 => ['nama' => 'Mie Ayam', 'harga' => 12000],
+    3 => ['nama' => 'Sate Ayam', 'harga' => 20000],
+    4 => ['nama' => 'Es Teh', 'harga' => 5000],
+    5 => ['nama' => 'Es Jeruk', 'harga' => 7000]
+];
+
+
+$pesanan = [
+    ['pilihan' => 1, 'jumlah' => 2], 
+    ['pilihan' => 4, 'jumlah' => 3], 
+    ['pilihan' => 5, 'jumlah' => 1]  
+];
 
 $total = 0;
 $output = "";
 
-// Ada 3 pesanan
-for ($i = 1; $i <= 3; $i++) {
-    $pilihan = ${"pilihan".$i};
-    $jumlah  = ${"jumlah".$i};
 
-    // Cek menu berdasarkan pilihan
-    if ($pilihan == 1) {
-        $nama = "Nasi Goreng";
-        $harga = 15000;
-    } elseif ($pilihan == 2) {
-        $nama = "Mie Ayam";
-        $harga = 12000;
-    } elseif ($pilihan == 3) {
-        $nama = "Sate Ayam";
-        $harga = 20000;
-    } elseif ($pilihan == 4) {
-        $nama = "Es Teh";
-        $harga = 5000;
-    } elseif ($pilihan == 5) {
-        $nama = "Es Jeruk";
-        $harga = 7000;
+foreach ($pesanan as $item) {
+    $pilihan = $item['pilihan'];
+    $jumlah = $item['jumlah'];
+
+    // Cek apakah pilihan menu ada di $daftar_menu
+    if (isset($daftar_menu[$pilihan])) {
+        $menu_detail = $daftar_menu[$pilihan];
+        $nama  = $menu_detail['nama'];
+        $harga = $menu_detail['harga'];
     } else {
-        $nama = "Menu tidak valid";
+        $nama  = "Menu tidak valid";
         $harga = 0;
     }
 
     $subtotal = $harga * $jumlah;
     $total += $subtotal;
-    $output .= "$nama x $jumlah = Rp $subtotal<br>";
+    $output .= "$nama x $jumlah = Rp " . number_format($subtotal, 0, ',', '.') . "<br>";
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kasir Sederhana</title>
+    <title>Kasir Sederhana (Array)</title>
 </head>
 <body>
     <h2>Menu:</h2>
     <ul>
-        <li>1. Nasi Goreng - Rp 15.000</li>
-        <li>2. Mie Ayam - Rp 12.000</li>
-        <li>3. Sate Ayam - Rp 20.000</li>
-        <li>4. Es Teh - Rp 5.000</li>
-        <li>5. Es Jeruk - Rp 7.000</li>
+        <?php 
+        foreach ($daftar_menu as $id => $detail) {
+            echo '<li>' . $id . '. ' . $detail['nama'] . ' - Rp ' . number_format($detail['harga'], 0, ',', '.') . '</li>';
+        }
+        ?>
     </ul>
+    
     <h3>Pesanan:</h3>
     <?php echo $output; ?>
-    <h3>Total Harga: Rp <?php echo $total; ?></h3>
+    
+    <h3>Total Harga: Rp <?php echo number_format($total, 0, ',', '.'); ?></h3>
 </body>
 </html>
-
