@@ -7,33 +7,35 @@ $menu = [
     5 => ["nama" => "Jus Jeruk", "harga" => 8000],
 ];
 
+
+$pilihan_menu = [2, 3, 5];   
+$jumlah_beli  = [1, 1, 1];   
+
+
 $total = 0;
 
-//?menu=1,2&jumlah=2,3l
-$pilihan = $_GET['menu'] ?? null;
-$jumlah  = $_GET['jumlah'] ?? null;
-
-if ($pilihan && $jumlah) {
-    $pilihanArr = explode(",", $pilihan);
-    $jumlahArr  = explode(",", $jumlah);
-
-    echo "=== MENU KASIR ===<br>";
-
-    foreach ($pilihanArr as $i => $id) {
-        if (isset($menu[$id])) {
-            $jml = isset($jumlahArr[$i]) ? (int)$jumlahArr[$i] : 1;
-            $subtotal = $menu[$id]['harga'] * $jml;
-            $total += $subtotal;
-
-            echo "Beli {$menu[$id]['nama']} x $jml = Rp $subtotal<br>";
-        }
-    }
-
-    echo "<br><b>Total Bayar = Rp $total</b>";
-} else {
-    echo "Silakan masukkan pilihan menu lewat URL.<br>";
-    echo "Contoh: <br>";
-    echo "http://localhost/kasir.php?menu=1,2&jumlah=2,3<br>";
-    echo "(artinya: beli Nasi Goreng 2 porsi + Mie Ayam 3 porsi)";
+echo "=== MENU KASIR ===\n <br>";
+foreach ($menu as $key => $item) {
+    echo "$key. {$item['nama']} - Rp {$item['harga']}\n <br>";
 }
+echo "=====================\n <br>";
+
+for ($i = 0; $i < count($pilihan_menu); $i++) {
+    $id = $pilihan_menu[$i];
+    $jml = $jumlah_beli[$i];
+
+    if (isset($menu[$id])) {
+        $nama = $menu[$id]['nama'];
+        $harga = $menu[$id]['harga'];
+        $subtotal = $harga * $jml;
+        $total += $subtotal;
+
+        echo "Beli $nama x $jml = Rp $subtotal\n <br>";
+    } else {
+        echo "Menu nomor $id tidak tersedia!\n <br>";
+    }
+}
+
+echo "=====================\n <br>";
+echo "Total Bayar = Rp $total\n";
 ?>
