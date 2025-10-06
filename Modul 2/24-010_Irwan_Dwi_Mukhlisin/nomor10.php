@@ -23,9 +23,9 @@ foreach ($menu as $key => $item) {
 
 echo "<h3>Daftar Pesanan:</h3>";
 
-foreach ($pesanan as $p) {
-    $pilihan = $p['menu'];
-    $jumlah = $p['jumlah'];
+foreach ($pesanan as $data) {
+    $pilihan = $data['menu'];
+    $jumlah = $data['jumlah'];
 
     if (isset($menu[$pilihan])) {
         $subtotal = $menu[$pilihan]['harga'] * $jumlah;
