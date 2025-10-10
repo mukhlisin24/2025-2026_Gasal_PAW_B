@@ -9,7 +9,7 @@ echo "<br>";
 echo "1. Menambahkan lima data baru dalam array $ height! Apakah Anda perlu melakukan perubahan pada skrip penggunaan struktur perulangan FOR (skrip pada baris #4 – #7) untuk menampilkan seluruh data dalam array $ height dengan adanya penambahan lima data baru? Mengapa demikian? Jelaskan!";
 echo "<br><br>";
 
-// Data baru
+// tambah data baru
 $newHeight = [
     'Zekk' => 168,
     'Budi' => 172,
