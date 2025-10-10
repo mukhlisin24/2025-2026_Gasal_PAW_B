@@ -6,6 +6,7 @@ echo "Key=" . $x . ", Value=" . $x_value;
 echo "<br>";
 }
 echo "<br>";
+// soal 1
 echo "1. Menambahkan lima data baru dalam array $ height! Apakah Anda perlu melakukan perubahan pada skrip penggunaan struktur perulangan FOR (skrip pada baris #4 – #7) untuk menampilkan seluruh data dalam array $ height dengan adanya penambahan lima data baru? Mengapa demikian? Jelaskan!";
 echo "<br><br>";
 
@@ -27,7 +28,7 @@ for ($i = 0, $n = count($keys); $i < $n; $i++) {
 }
 echo '<br> Tidak perlu mengubah FOR jika batas perulangan berbasis count($height)/array_keys($height), karena jumlah elemen dibaca dinamis. Perubahan hanya perlu bila batas atas di-hardcode. Karena $height asosiatif, FOR harus memakai array_keys (bukan indeks numerik).';
 echo "<br><br>";
-
+// soal 2
 echo "2. Buat array baru dengan nama $ weight yang memiliki tiga buah data! Tampilkan seluruh data dari array $ weight dengan menggunakan stuktur perulangan FOR! Apakah Anda membuat skrip baru untuk menampilkan seluruh array $ weight ataukah Anda cukup sedikit memofikasi skrip yang sudah ada? Mengapa demikian? Jelaskan!";  
 echo "<br><br>";
 

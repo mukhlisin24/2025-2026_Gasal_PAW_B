@@ -30,7 +30,7 @@ for ($i = 0, $n = count($students); $i < $n; $i++) {
 }
 
 echo "<br>";
-// 
+// soal 2
 echo "2. Tampilkan data dalam array $ students dalam bentuk tabel!";
 echo "<br>jawab: <br>";
 ?>
