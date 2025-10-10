@@ -5,9 +5,10 @@ $height = array(
     "Diana"=>"168", "Ethan"=>"174", "Fiona"=>"160", "George"=>"172", "Hannah"=>"169"
 );
 
-foreach($height as $x => $x_value) {
-echo "Key=" . $x . ", Value=" . $x_value;
-echo "<br>";
+$keys = array_keys($height);
+$values = array_values($height);
+for ($i = 0; $i < count($height); $i++) {
+    echo "Key=" . $keys[$i] . ", Value=" . $values[$i] . "<br>";
 }
 echo "<hr>";
 
