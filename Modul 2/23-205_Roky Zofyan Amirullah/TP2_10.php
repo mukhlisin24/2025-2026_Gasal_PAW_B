@@ -11,7 +11,6 @@ $menu = [
 $pilihan_menu = [2, 3, 5];   
 $jumlah_beli  = [1, 1, 1];   
 
-
 $total = 0;
 
 echo "=== MENU KASIR ===\n <br>";
