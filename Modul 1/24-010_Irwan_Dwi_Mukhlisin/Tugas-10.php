@@ -4,8 +4,8 @@ $nim = 240411100010;
 $kelas = 'PAW 3B';
 $prodi = 'Teknik Informatika';
 $alamat = 'Lamongan';
-$hobi = 'Sepak bola'
-    ?>
+$hobi = 'Sepak bola';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
