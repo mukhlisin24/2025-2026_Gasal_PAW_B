@@ -126,7 +126,7 @@ while ($row = mysqli_fetch_assoc($hasil)) {
     </div>
     <br>
     <button onclick="window.print()">Cetak</button>
-    <button onclick="window.location.href='excel.php'">Excel</button>
+    <button onclick="window.location.href='excel.php?start=<?= $start ?>&end=<?= $end ?>'">Excel</button>
 </body>
 
 </html>

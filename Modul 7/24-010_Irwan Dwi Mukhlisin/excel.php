@@ -85,7 +85,7 @@ while ($row = mysqli_fetch_assoc($hasil)) {
             }
         });
     </script>
-    <h2>Rekap Laporan Penjualan</h2>
+    <h2>Rekap Laporan Penjualan <?= "$start sampai $end" ?></h2>
     <div>
         <table border="1">
             <tr>
@@ -110,7 +110,7 @@ while ($row = mysqli_fetch_assoc($hasil)) {
         <table border="1">
             <tr>
                 <td>Jumlah Pelanggan</td>
-                <td>Jumlah Pendapan</td>
+                <td>Jumlah Pendapatan</td>
             </tr>
             <tr>
                 <td><?= $total_pelanggan ?> Orang</td>
